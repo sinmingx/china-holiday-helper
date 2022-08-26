@@ -1,0 +1,17 @@
+{
+    "name": "sinming/china-holiday-helper",
+    "description": "关于中国法定节假日、休息日、正常工作日及调休工作日查询",
+    "license": "MIT",
+    "authors": [{
+        "name": "sinming-x",
+        "email": "sinmingx@gmail.com"
+    }],
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SinMing\\ChinaHoliday\\": "src"
+        }
+    }
+}
