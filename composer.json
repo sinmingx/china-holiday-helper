@@ -13,5 +13,7 @@
         "psr-4": {
             "SinMing\\ChinaHoliday\\": "src"
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
