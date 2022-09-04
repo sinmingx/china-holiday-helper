@@ -1,7 +1,7 @@
 <?php
 namespace SinMing\ChinaHoliday;
 
-use SinMing\ChinaHoliday\ChinaHolidayUtils;
+use SinMing\ChinaHoliday\ChinaHolidayHelper;
 
 class DateInfo
 {
@@ -30,7 +30,7 @@ class DateInfo
      */
     public function isHoliday()
     {
-        return $this->isHoliday = is_null($this->isHoliday) ? ChinaHolidayUtils::isHoliday($this->date) : $this->isHoliday;
+        return $this->isHoliday = is_null($this->isHoliday) ? ChinaHolidayHelper::isHoliday($this->date) : $this->isHoliday;
     }
 
     /**
@@ -40,7 +40,7 @@ class DateInfo
      */
     public function isAdjustedWorkday()
     {
-        return $this->isAdjustedWorkday = is_null($this->isAdjustedWorkday) ? ChinaHolidayUtils::isAdjustedWorkday($this->date) : $this->isAdjustedWorkday;
+        return $this->isAdjustedWorkday = is_null($this->isAdjustedWorkday) ? ChinaHolidayHelper::isAdjustedWorkday($this->date) : $this->isAdjustedWorkday;
     }
 
     /**
@@ -51,7 +51,7 @@ class DateInfo
      */
     public function isOffday($includeHolidays = true)
     {
-        return $this->isOffday = is_null($this->isOffday) ? ChinaHolidayUtils::isOffday($this->date, $includeHolidays) : $this->isOffday;
+        return $this->isOffday = is_null($this->isOffday) ? ChinaHolidayHelper::isOffday($this->date, $includeHolidays) : $this->isOffday;
     }
 
     /**
@@ -62,7 +62,7 @@ class DateInfo
      */
     public function isWorkday($includeAdjustedWorkdays = true)
     {
-        return $this->isWorkday = is_null($this->isWorkday) ? ChinaHolidayUtils::isWorkday($this->date, $includeAdjustedWorkdays) : $this->isWorkday;
+        return $this->isWorkday = is_null($this->isWorkday) ? ChinaHolidayHelper::isWorkday($this->date, $includeAdjustedWorkdays) : $this->isWorkday;
     }
 
     /**
@@ -72,7 +72,7 @@ class DateInfo
      */
     public function getType()
     {
-        return $this->type = is_null($this->type) ? ChinaHolidayUtils::getType($this->date) : $this->type;
+        return $this->type = is_null($this->type) ? ChinaHolidayHelper::getType($this->date) : $this->type;
     }
 
     /**
@@ -94,7 +94,7 @@ class DateInfo
     public function getHolidayName()
     {
         if ($this->isHoliday() && is_null($this->isHoliday)) {
-            $this->holidayName = ChinaHolidayUtils::getHolidayList()[$this->date]['holiday_name'];
+            $this->holidayName = ChinaHolidayHelper::getHolidayList()[$this->date]['holiday_name'];
         }
 
         return $this->holidayName;
@@ -108,7 +108,7 @@ class DateInfo
     public function getAdjustedWorkReason()
     {
         if ($this->isAdjustedWorkday() && is_null($this->adjustedWorkReason)) {
-            $this->adjustedWorkReason = ChinaHolidayUtils::getAdjustedWorkdayList()[$this->date]['adjusted_work_reason'];
+            $this->adjustedWorkReason = ChinaHolidayHelper::getAdjustedWorkdayList()[$this->date]['adjusted_work_reason'];
         }
 
         return $this->adjustedWorkReason;

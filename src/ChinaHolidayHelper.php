@@ -1,7 +1,6 @@
 <?php
 namespace SinMing\ChinaHoliday;
 
-
 class ChinaHolidayHelper
 {
     const SECONDS_IN_DAY  = 86400;
@@ -11,6 +10,9 @@ class ChinaHolidayHelper
     const OFFDAY_TYPE           = 2;
     const ADJUSTED_WORKDAY_TYPE = 3;
     const WORKDAY_TYPE          = 4;
+
+    const DEFAULT_HOLIDAY_SATRT_DATE = '2006-12-01';
+    const DEFAULT_START_DATE         = '1970-01-01';
 
     private static $data = null;
 
@@ -22,7 +24,7 @@ class ChinaHolidayHelper
      * @param string $format 格式化
      * @return array 日期列表
      */
-    public static function getHolidays($startDt = '2007-01-01', $endDt = '00:00', $format = 'Y-m-d')
+    public static function getHolidays($startDt = self::DEFAULT_HOLIDAY_SATRT_DATE, $endDt = '00:00', $format = 'Y-m-d')
     {
         $startDt = strtotime($startDt);
         $endDt   = strtotime($endDt);
@@ -46,7 +48,7 @@ class ChinaHolidayHelper
      * @param string $format 格式化
      * @return array 日期列表
      */
-    public static function getAdjustedWorkdays($startDt = '2007-01-01', $endDt = '00:00', $format = 'Y-m-d')
+    public static function getAdjustedWorkdays($startDt = self::DEFAULT_HOLIDAY_SATRT_DATE, $endDt = '00:00', $format = 'Y-m-d')
     {
         $startDt = strtotime($startDt);
         $endDt   = strtotime($endDt);
@@ -71,12 +73,13 @@ class ChinaHolidayHelper
      * @param string $format 格式化
      * @return array 日期列表
      */
-    public static function getOffdays($startDt = '1970-01-01', $endDt = '00:00', $includeHolidays = true, $format = 'Y-m-d')
+    public static function getOffdays($startDt = self::DEFAULT_START_DATE, $endDt = '00:00', $includeHolidays = true, $format = 'Y-m-d')
     {
         $startDt          = strtotime($startDt);
         $endDt            = strtotime($endDt);
-        $days             = $includeHolidays ? array_keys(self::getHolidayList()) : [];
-        $adjustedWorkdays = array_keys(self::getAdjustedWorkdayList());
+        $days             = $includeHolidays ? self::getHolidays($startDt, $endDt, $format) : [];
+        $days             = [];
+        $adjustedWorkdays = self::getAdjustedWorkdays();
 
         while ($startDt <= $endDt) {
             if (self::isWeekend($startDt)) {
@@ -99,12 +102,12 @@ class ChinaHolidayHelper
      * @param string $format 格式化
      * @return array 日期列表
      */
-    public static function getWorkdays($startDt = '1970-01-01', $endDt = '00:00', $includeAdjustedWorkdays = true, $format = 'Y-m-d')
+    public static function getWorkdays($startDt = self::DEFAULT_START_DATE, $endDt = '00:00', $includeAdjustedWorkdays = true, $format = 'Y-m-d')
     {
         $startDt  = strtotime($startDt);
         $endDt    = strtotime($endDt);
-        $days     = $includeAdjustedWorkdays ? array_keys(self::getAdjustedWorkdayList()) : [];
-        $holidays = array_keys(self::getHolidayList());
+        $days     = $includeAdjustedWorkdays ? array_keys(self::getAdjustedWorkdays($startDt, $endDt, $format)) : [];
+        $holidays = self::getHolidays();
 
         while ($startDt <= $endDt) {
             if (self::isWeekday($startDt)) {
