@@ -2174,17 +2174,17 @@
     '2022-12-31' => 
     array (
       'date' => '2022-12-31',
-      'holiday_name' => '',
+      'holiday_name' => '元旦节',
     ),
     '2023-01-01' => 
     array (
       'date' => '2023-01-01',
-      'holiday_name' => '',
+      'holiday_name' => '元旦节',
     ),
     '2023-01-02' => 
     array (
       'date' => '2023-01-02',
-      'holiday_name' => '',
+      'holiday_name' => '元旦节',
     ),
     '2023-01-21' => 
     array (
@@ -2305,6 +2305,146 @@
     array (
       'date' => '2023-10-06',
       'holiday_name' => '国庆节、中秋节',
+    ),
+    '2024-01-01' => 
+    array (
+      'date' => '2024-01-01',
+      'holiday_name' => '元旦节',
+    ),
+    '2024-02-10' => 
+    array (
+      'date' => '2024-02-10',
+      'holiday_name' => '春节',
+    ),
+    '2024-02-11' => 
+    array (
+      'date' => '2024-02-11',
+      'holiday_name' => '春节',
+    ),
+    '2024-02-12' => 
+    array (
+      'date' => '2024-02-12',
+      'holiday_name' => '春节',
+    ),
+    '2024-02-13' => 
+    array (
+      'date' => '2024-02-13',
+      'holiday_name' => '春节',
+    ),
+    '2024-02-14' => 
+    array (
+      'date' => '2024-02-14',
+      'holiday_name' => '春节',
+    ),
+    '2024-02-15' => 
+    array (
+      'date' => '2024-02-15',
+      'holiday_name' => '春节',
+    ),
+    '2024-02-16' => 
+    array (
+      'date' => '2024-02-16',
+      'holiday_name' => '春节',
+    ),
+    '2024-02-17' => 
+    array (
+      'date' => '2024-02-17',
+      'holiday_name' => '春节',
+    ),
+    '2024-04-04' => 
+    array (
+      'date' => '2024-04-04',
+      'holiday_name' => '清明节',
+    ),
+    '2024-04-05' => 
+    array (
+      'date' => '2024-04-05',
+      'holiday_name' => '清明节',
+    ),
+    '2024-04-06' => 
+    array (
+      'date' => '2024-04-06',
+      'holiday_name' => '清明节',
+    ),
+    '2024-05-01' => 
+    array (
+      'date' => '2024-05-01',
+      'holiday_name' => '劳动节',
+    ),
+    '2024-05-02' => 
+    array (
+      'date' => '2024-05-02',
+      'holiday_name' => '劳动节',
+    ),
+    '2024-05-03' => 
+    array (
+      'date' => '2024-05-03',
+      'holiday_name' => '劳动节',
+    ),
+    '2024-05-04' => 
+    array (
+      'date' => '2024-05-04',
+      'holiday_name' => '劳动节',
+    ),
+    '2024-05-05' => 
+    array (
+      'date' => '2024-05-05',
+      'holiday_name' => '劳动节',
+    ),
+    '2024-06-10' => 
+    array (
+      'date' => '2024-06-10',
+      'holiday_name' => '端午节',
+    ),
+    '2024-09-15' => 
+    array (
+      'date' => '2024-09-15',
+      'holiday_name' => '中秋节',
+    ),
+    '2024-09-16' => 
+    array (
+      'date' => '2024-09-16',
+      'holiday_name' => '中秋节',
+    ),
+    '2024-09-17' => 
+    array (
+      'date' => '2024-09-17',
+      'holiday_name' => '中秋节',
+    ),
+    '2024-10-01' => 
+    array (
+      'date' => '2024-10-01',
+      'holiday_name' => '国庆节',
+    ),
+    '2024-10-02' => 
+    array (
+      'date' => '2024-10-02',
+      'holiday_name' => '国庆节',
+    ),
+    '2024-10-03' => 
+    array (
+      'date' => '2024-10-03',
+      'holiday_name' => '国庆节',
+    ),
+    '2024-10-04' => 
+    array (
+      'date' => '2024-10-04',
+      'holiday_name' => '国庆节',
+    ),
+    '2024-10-05' => 
+    array (
+      'date' => '2024-10-05',
+      'holiday_name' => '国庆节',
+    ),
+    '2024-10-06' => 
+    array (
+      'date' => '2024-10-06',
+      'holiday_name' => '国庆节',
+    ),
+    '2024-10-07' => 
+    array (
+      'date' => '2024-10-07',
+      'holiday_name' => '国庆节',
     ),
   ),
   'adjusted_workdays' => 
@@ -2857,6 +2997,46 @@
     '2023-10-08' => 
     array (
       'date' => '2023-10-08',
+      'adjusted_work_reason' => '国庆节调休',
+    ),
+    '2024-02-04' => 
+    array (
+      'date' => '2024-02-04',
+      'adjusted_work_reason' => '春节调休',
+    ),
+    '2024-02-18' => 
+    array (
+      'date' => '2024-02-18',
+      'adjusted_work_reason' => '春节调休',
+    ),
+    '2024-04-07' => 
+    array (
+      'date' => '2024-04-07',
+      'adjusted_work_reason' => '清明节调休',
+    ),
+    '2024-04-28' => 
+    array (
+      'date' => '2024-04-28',
+      'adjusted_work_reason' => '劳动节调休',
+    ),
+    '2024-05-11' => 
+    array (
+      'date' => '2024-05-11',
+      'adjusted_work_reason' => '劳动节调休',
+    ),
+    '2024-09-14' => 
+    array (
+      'date' => '2024-09-14',
+      'adjusted_work_reason' => '中秋节调休',
+    ),
+    '2024-09-29' => 
+    array (
+      'date' => '2024-09-29',
+      'adjusted_work_reason' => '国庆节调休',
+    ),
+    '2024-10-12' => 
+    array (
+      'date' => '2024-10-12',
       'adjusted_work_reason' => '国庆节调休',
     ),
   ),
